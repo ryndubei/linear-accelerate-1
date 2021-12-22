@@ -225,7 +225,7 @@ instance A.Num a => P.Num (Exp (V4 a)) where
   (*)             = lift2 ((*) :: V4 (Exp a) -> V4 (Exp a) -> V4 (Exp a))
   negate          = lift1 (negate :: V4 (Exp a) -> V4 (Exp a))
   signum          = lift1 (signum :: V4 (Exp a) -> V4 (Exp a))
-  abs             = lift1 (signum :: V4 (Exp a) -> V4 (Exp a))
+  abs             = lift1 (abs :: V4 (Exp a) -> V4 (Exp a))
   fromInteger x   = lift (P.fromInteger x :: V4 (Exp a))
 
 instance A.Floating a => P.Fractional (Exp (V4 a)) where

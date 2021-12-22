@@ -153,7 +153,7 @@ instance A.Num a => P.Num (Exp (V2 a)) where
   (*)             = lift2 ((*) :: V2 (Exp a) -> V2 (Exp a) -> V2 (Exp a))
   negate          = lift1 (negate :: V2 (Exp a) -> V2 (Exp a))
   signum          = lift1 (signum :: V2 (Exp a) -> V2 (Exp a))
-  abs             = lift1 (signum :: V2 (Exp a) -> V2 (Exp a))
+  abs             = lift1 (abs :: V2 (Exp a) -> V2 (Exp a))
   fromInteger x   = lift (P.fromInteger x :: V2 (Exp a))
 
 instance A.Floating a => P.Fractional (Exp (V2 a)) where
